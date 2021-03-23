@@ -1,6 +1,13 @@
 import request from '@/utils/request'
 
+const api_name = 'gathering'
 export default {
+    page(page, size) {
+        return request({
+            url: '/${api_name}/${page}/${size}',
+            method: 'get'
+        })
+    },
     getList() {
         return request({
             url: "/gathering/gathering",
